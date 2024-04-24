@@ -1,10 +1,19 @@
 package com.hangman.display;
 
-public class Game extends Display {
+import com.hangman.game.UpdatedGuess;
+import com.hangman.game.Word;
 
+public class Game extends Display {
+    Word word = new Word();
+    UpdatedGuess guess = new UpdatedGuess();
     public void startGame() {
         dashedLine();
         System.out.println("HANGMAN");
+        word.wordToUnderscores();
+        System.out.println(word.getUnderscoreArr());
+        word.wordToLetters();
+        System.out.println(word.getLettersArr());
+        guess.testCurrentGuess();
         emptySpace();
     }
 
