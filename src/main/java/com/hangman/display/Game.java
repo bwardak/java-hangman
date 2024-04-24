@@ -9,11 +9,12 @@ public class Game extends Display {
     public void startGame() {
         dashedLine();
         System.out.println("HANGMAN");
-        word.wordToUnderscores();
-        System.out.println(word.getUnderscoreArr());
-        word.wordToLetters();
-        System.out.println(word.getLettersArr());
+        word.inputWord();
         guess.testCurrentGuess();
+        word.wordToUnderscores();
+        word.underScoreArrayCurrent();
+        guess.compareLetter();
+
         emptySpace();
     }
 
@@ -24,7 +25,7 @@ public class Game extends Display {
         System.out.println("- You must guess one letter at the time, or enter a word if you believe you know the answer.");
         System.out.println("- If the letter matches, it will appear in place of a dash.");
         System.out.println("- If you are wrong, you lose a life.");
-        System.out.println("- Win: You guess the word correctly.\n-Lose: You run out of lives.");
+        System.out.println("- Win: You guess the word correctly.\n- Lose: You run out of lives.");
         emptySpace();
         startActions();
         commandAction();
