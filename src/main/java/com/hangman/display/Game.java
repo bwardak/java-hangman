@@ -9,10 +9,8 @@ public class Game extends Display {
     public void startGame() {
         dashedLine();
         System.out.println("HANGMAN");
-        word.inputWord();
         guess.testCurrentGuess();
-        word.wordToUnderscores();
-        word.underScoreArrayCurrent();
+        guess.underScoreArrayCurrent();
         guess.compareLetter();
 
         emptySpace();
@@ -32,11 +30,15 @@ public class Game extends Display {
     }
 
     public void commandAction() {
-            int input = Display.getIntegerInput();
-            if (input == 0) {
-                startGame();
-            } else if (input == 1) {
-                showRules();
-            }
+        int input = Display.getIntegerInput();
+        if (input == 0) {
+            startGame();
+        } else if (input == 1) {
+            showRules();
         }
+    }
+
+    public void restartGame() {
+        
+    }
 }
