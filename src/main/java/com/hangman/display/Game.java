@@ -1,17 +1,27 @@
 package com.hangman.display;
 
+import com.hangman.game.HangmanLives;
 import com.hangman.game.UpdatedGuess;
 import com.hangman.game.Word;
 
 public class Game extends Display {
     Word word = new Word();
     UpdatedGuess guess = new UpdatedGuess();
+    HangmanLives hang = new HangmanLives();
     public void startGame() {
         dashedLine();
         System.out.println("HANGMAN");
         guess.testCurrentGuess();
         guess.underScoreArrayCurrent();
         guess.compareLetter();
+        hang.oneWrongGuess();
+        hang.twoWrongGuess();
+        hang.threeWrongGuess();
+        hang.fourWrongGuess();
+        hang.fiveWrongGuess();
+        hang.sixWrongGuess();
+        hang.sevenWrongGuess();
+        hang.eightWrongGuess();
 
         emptySpace();
     }
@@ -39,6 +49,6 @@ public class Game extends Display {
     }
 
     public void restartGame() {
-        
+
     }
 }
