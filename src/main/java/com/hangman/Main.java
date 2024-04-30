@@ -12,7 +12,7 @@ public class Main {
         // welcome message
         System.out.println(landing.gameTitle());
 
-        // Home screen for rules or start game
+        // Home screen printed for rules or start game
         Start home = new Start();
         home.greetPlayer();
         home.initiateGame();

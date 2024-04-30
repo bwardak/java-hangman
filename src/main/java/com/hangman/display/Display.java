@@ -46,17 +46,18 @@ public class Display {
     }
 
     public void dashedLine() {
-        System.out.println("----------------------------\n\n\n");
+        System.out.println("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
     }
 
     public void emptySpace() {
-        System.out.println("\n\n");
+        System.out.println("\n\n\n");
     }
 
     public static int getIntegerInput() {
         System.out.println("Enter a number: ");
         int intInput = scanner.nextInt();
         scanner.nextLine();
+        System.out.println("\n");
         return intInput;
     }
 

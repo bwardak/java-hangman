@@ -10,20 +10,13 @@ public class Game extends Display {
     HangmanLives hang = new HangmanLives();
     public void startGame() {
         dashedLine();
-        System.out.println("HANGMAN");
-        guess.testCurrentGuess();
+        System.out.println("HANGMAN\n \n \n");
+        guess.updatedStatus();
+//        guess.testCurrentGuess();
         guess.underScoreArrayCurrent();
         guess.compareLetter();
-        hang.oneWrongGuess();
-        hang.twoWrongGuess();
-        hang.threeWrongGuess();
-        hang.fourWrongGuess();
-        hang.fiveWrongGuess();
-        hang.sixWrongGuess();
-        hang.sevenWrongGuess();
-        hang.eightWrongGuess();
-
         emptySpace();
+
     }
 
     public void showRules() {
