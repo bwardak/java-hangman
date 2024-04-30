@@ -12,37 +12,37 @@ public class HangmanLives {
     }
 
     public void twoWrongGuess() {
-        hangman.set(0, "   |\n   |\n   |\n   |\n   |\n___|___");
+        hangman.set(0, "\n   |\n   |\n   |\n   |\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 
     public void threeWrongGuess() {
-        hangman.set(0, "   ----------\n   |/\n   |\n   |\n   |\n   |\n   |\n___|___");
+        hangman.set(0, "\n   ----------\n   |/\n   |\n   |\n   |\n   |\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 
     public void fourWrongGuess() {
-        hangman.set(0, "   ----------\n   |/       |\n   |\n   |\n   |\n   |\n   |\n___|___");
+        hangman.set(0, " \n  ----------\n   |/       |\n   |\n   |\n   |\n   |\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 
     public void fiveWrongGuess() {
-        hangman.set(0, "   ----------\n   |/       |\n   |       (_)\n   |\n   |\n   |\n   |\n___|___");
+        hangman.set(0, "\n   ----------\n   |/       |\n   |       (_)\n   |\n   |\n   |\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 
     public void sixWrongGuess() {
-        hangman.set(0, "   ----------\n   |/       |\n   |       (_)\n   |        |\n   |        |\n   |\n   |\n___|___");
+        hangman.set(0, "\n   ----------\n   |/       |\n   |       (_)\n   |        |\n   |        |\n   |\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 
     public void sevenWrongGuess() {
-        hangman.set(0, "   ----------\n   |/       |\n   |       (_)\n   |       \\|/\n   |        |\n   |\n   |\n___|___");
+        hangman.set(0, "\n   ----------\n   |/       |\n   |       (_)\n   |       \\|/\n   |        |\n   |\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 
     public void eightWrongGuess() {
-        hangman.set(0, "   ----------\n   |/       |\n   |       (_)\n   |       \\|/\n   |        |\n   |       / \\\n   |\n___|___");
+        hangman.set(0, "\n   ----------\n   |/       |\n   |       (_)\n   |       \\|/\n   |        |\n   |       / \\\n   |\n___|___");
         System.out.println(hangman.get(0));
     }
 }

@@ -67,6 +67,7 @@ public class UpdatedGuess extends  Word{
             updatedStatus();
             System.out.println("                           " + String.join(" ", compareUnderscoreArr));
             display.emptySpace();
+            display.dashedLine();
             victoryConditionLetterGuess();
         }
     }
@@ -97,7 +98,7 @@ public class UpdatedGuess extends  Word{
             case 0:
                 hang.eightWrongGuess();
         }
-        System.out.println("Guesses: " + guessedLetters);
+        System.out.println("\nGuesses: " + guessedLetters);
         loseCondition();
         System.out.println("\n \n");
     }
