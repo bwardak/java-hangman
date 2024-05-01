@@ -35,6 +35,7 @@ public class UpdatedGuess extends  Word{
         String input = scanner.nextLine().trim().toLowerCase();
         String answer = getWord();
         answerDisplay = getWord();
+        guessedLetters.add(input);
         if (input.equals(answer)){          // CORRECT GUESS
             compareUnderscoreArr.clear();
             victoryConditionWordGuess();
@@ -44,10 +45,10 @@ public class UpdatedGuess extends  Word{
                     int index = compareLettersArr.indexOf(input);
                     compareUnderscoreArr.set(index, input);
                     compareLettersArr.set(index, "_");
-                    guessedLetters.add(input);
+//                    guessedLetters.add(input);
                 }
             } else {
-                guessedLetters.add(input);
+//                guessedLetters.add(input);
                 lives--;
             }
             updatedStatus();
