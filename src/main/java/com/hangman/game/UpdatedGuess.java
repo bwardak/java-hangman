@@ -36,6 +36,7 @@ public class UpdatedGuess extends  Word{
         String answer = getWord();
         answerDisplay = getWord();
         guessedLetters.add(input);
+
         if (input.equals(answer)){          // CORRECT GUESS
             compareUnderscoreArr.clear();
             victoryConditionWordGuess();
@@ -45,10 +46,8 @@ public class UpdatedGuess extends  Word{
                     int index = compareLettersArr.indexOf(input);
                     compareUnderscoreArr.set(index, input);
                     compareLettersArr.set(index, "_");
-//                    guessedLetters.add(input);
                 }
             } else {
-//                guessedLetters.add(input);
                 lives--;
             }
             updatedStatus();
@@ -91,7 +90,9 @@ public class UpdatedGuess extends  Word{
     }
 
     public void victoryConditionLetterGuess() {
-        if (compareUnderscoreArr.contains("_")) {
+        if (compareUnderscoreArr.contains(" ")) {
+            System.out.println("Thanks for playing :]");
+        }else if (compareUnderscoreArr.contains("_")) {
             compareLetter();
         } else {
             System.out.println("YOU WIN!");
@@ -117,12 +118,12 @@ public class UpdatedGuess extends  Word{
         display.dashedLine();
         System.out.println("Restart game? \n");
         System.out.println("0: Yes\n1: No");
+        compareUnderscoreArr.clear();
         int input = Display.getIntegerInput();
         if (input == 0) {
             gameRestart();
         } else if (input == 1) {
-            System.out.println("Thanks for playing :]");
-            compareUnderscoreArr.add("_");
+            compareUnderscoreArr.add(" ");
         }
     }
 

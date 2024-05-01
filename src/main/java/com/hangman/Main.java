@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         // object for run page
         Display landing = new Display();
+
         // welcome message
         System.out.println(landing.gameTitle());
 
