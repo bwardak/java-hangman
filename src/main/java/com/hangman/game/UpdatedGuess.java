@@ -1,15 +1,9 @@
 package com.hangman.game;
 
 import com.hangman.display.Display;
-import com.hangman.display.Game;
-
-
-import com.hangman.display.Game;
-import com.hangman.game.HangmanLives;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class UpdatedGuess extends  Word{
     private Scanner scanner = new Scanner(System.in);
@@ -31,14 +25,6 @@ public class UpdatedGuess extends  Word{
         setUnderscoreArr(underscoreArr);
         String underscoreArrJoined = String.join(" ", underscoreArr);
         System.out.println("                           " + underscoreArrJoined);
-    }
-
-    public void testCurrentGuess() {
-        System.out.println(getUnderscoreArr() + "This ting");
-        System.out.println(getLettersArr() + "This ting");
-        System.out.println(compareLettersArr);
-        System.out.println(compareUnderscoreArr);
-        System.out.println(underscoreArr + "UR");
     }
 
     public void compareLetter() {

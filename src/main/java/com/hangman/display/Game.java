@@ -1,22 +1,16 @@
 package com.hangman.display;
 
-import com.hangman.game.HangmanLives;
 import com.hangman.game.UpdatedGuess;
-import com.hangman.game.Word;
 
 public class Game extends Display {
-    Word word = new Word();
     UpdatedGuess guess = new UpdatedGuess();
-    HangmanLives hang = new HangmanLives();
     public void startGame() {
         dashedLine();
         System.out.println("HANGMAN\n \n \n");
         guess.updatedStatus();
-//        guess.testCurrentGuess();
         guess.underScoreArrayCurrent();
         guess.compareLetter();
         emptySpace();
-
     }
 
     public void showRules() {
@@ -39,9 +33,5 @@ public class Game extends Display {
         } else if (input == 1) {
             showRules();
         }
-    }
-
-    public void restartGame() {
-
     }
 }

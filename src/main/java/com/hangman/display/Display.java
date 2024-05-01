@@ -1,6 +1,5 @@
 package com.hangman.display;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -8,10 +7,7 @@ import java.util.Scanner;
 public class Display {
     private static Scanner scanner = new Scanner(System.in);
     private String title = "\nHANGMAN by Baheer \n";
-    private String currentPage;
     private ArrayList<String> pageCommands = new ArrayList<>();
-
-
 
     public Scanner getScanner() {
         return scanner;
@@ -20,15 +16,6 @@ public class Display {
     public String gameTitle() {
         return title;
     }
-
-    public String getCurrentPage() {
-        return currentPage;
-    }
-
-    public void setCurrentPage(String currentPage) {
-        this.currentPage = currentPage;
-    }
-
 
     public void addCommand(String... commands) {
         pageCommands.addAll(Arrays.asList(commands));

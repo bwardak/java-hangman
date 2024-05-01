@@ -16,10 +16,6 @@ public class Word {
         return lettersArr;
     }
 
-    public void setLettersArr(ArrayList<String> lettersArr) {
-        this.lettersArr = lettersArr;
-    }
-
     public ArrayList<String> getUnderscoreArr() {
         return underscoreArr;
     }
