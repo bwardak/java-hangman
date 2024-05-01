@@ -28,27 +28,36 @@ public class UpdatedGuess extends  Word{
     }
 
     public void compareLetter() {
-        if (guessedLetters.isEmpty()) {
-            display.dashedLine();
-        }
-        System.out.println("Enter your guess: ");
-        String input = scanner.nextLine().trim().toLowerCase();
-        String answer = getWord();
-        answerDisplay = getWord();
-        guessedLetters.add(input);
-
-        if (input.equals(answer)){          // CORRECT GUESS
-            compareUnderscoreArr.clear();
-            victoryConditionWordGuess();
+        if (compareUnderscoreArr.contains("Thanks for playing :]")) {
+            System.out.println("THANKS FOR PLAYING :]");
         } else {
-            if (compareLettersArr.contains(input)) {  // ADDED WHILE LOOP TO ADD EVERY INSTANCE OF GUESSED LETTER
-                while (compareLettersArr.contains(input)) {
-                    int index = compareLettersArr.indexOf(input);
-                    compareUnderscoreArr.set(index, input);
-                    compareLettersArr.set(index, "_");
+            if (guessedLetters.isEmpty()) {
+                display.dashedLine();
+            }
+            System.out.println("Enter your guess: ");
+            String input = scanner.nextLine().trim().toLowerCase();
+            String answer = getWord();
+            answerDisplay = getWord();
+            if (guessedLetters.contains(input) || input.matches(".*[0-9].*")) {
+                System.out.println("**************************************************************\nYou have already guessed this letter, please pick another one!\n**************************************************************");
+            }else {
+                guessedLetters.add(input);
+                if (input.equals(answer)){          // CORRECT GUESS
+                    compareUnderscoreArr.clear();
+                    victoryConditionWordGuess();
+                } else {
+                    if (compareLettersArr.contains(input)) {  // ADDED WHILE LOOP TO ADD EVERY INSTANCE OF GUESSED LETTER
+                        while (compareLettersArr.contains(input)) {
+                            int index = compareLettersArr.indexOf(input);
+                            compareUnderscoreArr.set(index, input);
+                            compareLettersArr.set(index, "_");
+                        }
+                    } else {
+                        lives--;
+                    }
+
                 }
-            } else {
-                lives--;
+
             }
             updatedStatus();
             System.out.println("                           " + String.join(" ", compareUnderscoreArr));
@@ -56,6 +65,7 @@ public class UpdatedGuess extends  Word{
             display.dashedLine();
             victoryConditionLetterGuess();
         }
+
     }
 
     public void updatedStatus() {
@@ -90,8 +100,8 @@ public class UpdatedGuess extends  Word{
     }
 
     public void victoryConditionLetterGuess() {
-        if (compareUnderscoreArr.contains(" ")) {
-            System.out.println("Thanks for playing :]");
+        if (compareUnderscoreArr.contains("Thanks for playing :]")) {
+            System.out.println("");
         }else if (compareUnderscoreArr.contains("_")) {
             compareLetter();
         } else {
@@ -123,7 +133,7 @@ public class UpdatedGuess extends  Word{
         if (input == 0) {
             gameRestart();
         } else if (input == 1) {
-            compareUnderscoreArr.add(" ");
+            compareUnderscoreArr.add("Thanks for playing :]");
         }
     }
 
